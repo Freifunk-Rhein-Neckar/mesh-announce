@@ -28,6 +28,24 @@ VPNProtocols: fastd
 # Default ddhcpd IPv4 gateway address
 # optional
 IPv4Gateway: 10.116.128.8
+# Hostname to advertise
+# optional, default is the System Hostname
+Hostname: gw01
+# Hardware used by the System
+# optional, default is None
+Hardware-Model: KVM VirtualMachine
+# Contact information of Owner
+# optional, default is None
+Contact: info@example.org
+# Latitude of the System
+# optional, default is None
+Latitude: 50.478083306
+# Longitude of the System
+# optional, default is None
+Longitude: 12.335736752
+# Is the System considered an Gateway
+# optional, default is True
+VPN: True
 
 # A domain
 # User your own domain name here
@@ -59,5 +77,23 @@ Interfaces: mvpn-ffki
 # IPv4 gateway option for ddhcpd
 # optional, default: @IPv4Gateway
 IPv4Gateway: 10.116.128.8
+# Hostname to advertise
+# optional, default: @Hostname
+Hostname: ffki.gw01
+# Hardware used by the System
+# optional, default: @Hardware-Model
+Hardware-Model: KVM VirtualMachine
+# Contact information of Owner
+# optional, default: @Contact
+Contact: ffki@example.org
+# Latitude of the System
+# optional, default: @Latitude
+Latitude: 50.478083306
+# Longitude of the System
+# optional, default: @Longitude
+Longitude: 12.335736752
+# Is the System considered an Gateway
+# optional, default: @VPN
+VPN: True
 
 # An arbitrary number of further domains may follow here
