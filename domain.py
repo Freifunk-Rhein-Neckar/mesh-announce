@@ -18,6 +18,9 @@ class Domain():
     def get_multicast_address_site(self):
         return self.config.mcast_site
 
+    def get_vpn_pubkey(self):
+        return self.config.vpn_pubkey
+
     def get_interfaces(self):
         ''' Returns list off all interfaces respondd queries are
             expected to arrive on
@@ -30,7 +33,8 @@ class Domain():
         '''
         return {
             'domain_code': self.get_name(),
-            'mesh_ipv4': self.get_ipv4_gateway()
+            'mesh_ipv4': self.get_ipv4_gateway(),
+            'vpn_pubkey': self.get_vpn_pubkey()
         }
 
 class BatadvDomain(Domain):
