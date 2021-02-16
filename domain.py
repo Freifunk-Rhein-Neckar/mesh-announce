@@ -21,8 +21,8 @@ class Domain():
     def get_vpn_pubkey(self):
         return self.config.vpn_pubkey
 
-    def get_vpn_proto(self):
-        return self.config.vpn_proto
+    def get_vpn_protos(self):
+        return self.config.vpn_protos
 
     def get_interfaces(self):
         ''' Returns list off all interfaces respondd queries are
@@ -38,7 +38,7 @@ class Domain():
             'domain_code': self.get_name(),
             'mesh_ipv4': self.get_ipv4_gateway(),
             'vpn_pubkey': self.get_vpn_pubkey()
-            'vpn_proto': self.get_vpn_proto()
+            'vpn_protos': self.get_vpn_protos()
         }
 
 class BatadvDomain(Domain):
