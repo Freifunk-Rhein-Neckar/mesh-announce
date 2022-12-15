@@ -5,10 +5,9 @@ from setuptools import setup, find_packages
 setup(name='mesh-announce',
 	version='1.0',
 	# Modules to import from other scripts:
-	packages=(find_packages(
-		where='/',
-		include=['pkg*'],  # alternatively: `exclude=['additional*']`
-	)+["announce.py", "config.py", "domain.py", "metasocketserver.py", "util.py"]),
+	packages=(find_packages(),
+	#)+["announce", "config", "domain", "metasocketserver", "util"]),
+	include_package_data=True,
 	# Executables
 	scripts=["announce.py", "respondd.py"],
 )
