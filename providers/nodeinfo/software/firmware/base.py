@@ -1,6 +1,7 @@
 import providers
 from providers.util import call
+from util import remove_enclosing_quotes
 
 class Source(providers.DataSource):
     def call(self):
-        return call(['lsb_release','-is'])[0]
+        return remove_enclosing_quotes(call(['lsb_release','-is'])[0])

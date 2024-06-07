@@ -97,3 +97,8 @@ def ifindex_to_batiface(if_index, batman_ifaces):
     if iface in batman_ifaces or iface == None:
         return iface
     return iface_match_recursive(iface, batman_ifaces)
+
+def remove_enclosing_quotes(string_s):
+    if (string_s.startswith("'") and string_s.endswith("'")) or (string_s.startswith('"') and string_s.endswith('"')):
+        return string_s[1:-1]
+    return string_s
